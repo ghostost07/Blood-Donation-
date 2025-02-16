@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="google-site-verification" content="0N5owJMh1lu9JvpmndC6PguVmu5YrV9ajLslM3Bf4wM" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Camp</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: #333;
+      animation: gradientBackground 10s ease infinite;
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: rgba(255, 77, 77, 0.9);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    nav {
+      background: rgba(51, 51, 51, 0.9);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff7e5f;
+      transform: translateY(-3px);
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #ff4d4d;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .donation-form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      margin: 40px auto;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .donation-form input, .donation-form select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .donation-form input:focus, .donation-form select:focus {
+      border-color: #ff7e5f;
+      box-shadow: 0 0 8px rgba(255, 77, 77, 0.5);
+      outline: none;
+    }
+
+    .donation-form button {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .donation-form button:hover {
+      background: #ff7e5f;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background: rgba(51, 51, 51, 0.9);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 0;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    .hero button {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .hero button:hover {
+      background: #ff7e5f;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blood Donation Camp</h1>
+    <p>Donate Blood, Save Lives!</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#donate">Donate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container">
+    <section id="home">
+      <div class="hero">
+        <h2>Your Donation Can Save Lives</h2>
+        <p>Join us in this noble cause and make a difference today.</p>
+        <button onclick="scrollToDonate()">Donate Now</button>
+      </div>
+    </section>
+    <section id="donate">
+      <h2>Donate Blood</h2>
+      <div class="donation-form">
+        <form id="donationForm">
+          <input type="text" id="name" placeholder="Full Name" required>
+          <input type="email" id="email" placeholder="Email Address" required>
+          <input type="tel" id="phone" placeholder="Phone Number" required>
+          <select id="bloodGroup" required>
+            <option value="">Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a non-profit organization dedicated to promoting blood donation and saving lives. Join us in our mission to make the world a better place.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@blooddonationcamp.com</p>
+      <p>Phone: +123 456 7890</p>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Blood Donation Camp. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('donationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for your donation! We will contact you soon.');
+      document.getElementById('donationForm').reset();
+    });
+
+    function scrollToDonate() {
+      document.getElementById('donate').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+       <url>
+           <loc>https://tiaret.blood.donation.com/</loc>
+           <lastmod>2025-02-16</lastmod>
+           <changefreq>weekly</changefreq>
+           <priority>1.0</priority>
+       </url>
+   </urlset>
+  
